@@ -9,7 +9,7 @@ def read_input(input_file: str, debug: bool = False) -> list[str]:
         raise FileNotFoundError(f"Oops, the file does not exist on the path.")
 
 
-def dial(instruction: list[str], debug: bool) -> int:
+def dial(instruction: list[str]) -> int:
     """Sums a list of numbers"""
     dial_position = 50
     zero_hits = 0
@@ -39,7 +39,7 @@ def algo(file: str) -> int:
     """
     instructions = read_input(file)
 
-    return dial(instructions, debug=True)
+    return dial(instructions)
 
 
 def main():
